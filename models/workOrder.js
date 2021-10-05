@@ -7,8 +7,6 @@ const workOrder = new mongoose.Schema(
       type: String,
       required: true,
       unique: true,
-
-
     },
 
     status: {
@@ -18,14 +16,21 @@ const workOrder = new mongoose.Schema(
     },
     assignedTo: {
       type: String,
-      enum: ['remote expert', 'field engg'],
-
-    },
+      userId:{
+        type:String
+      }
+      },
     deadLine: {
       type: Date,
       required: true
-    }
+    },
+    taskId: {
+      type:Array,
+      }
+
   },
+
+  
   { timestamps: true }
 );
 

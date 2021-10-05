@@ -12,9 +12,11 @@ const task = new mongoose.Schema(
         },
         tasks: {
             type: Array,
+            id:{type:String},
             steps: {title:{type:String}, description:{type:String},status:{type:Boolean,default:false}},
             status:{ type: String,
                 enum: ['pending', 'inProgress', 'completed'], default:'pending'}
+                
             
 
         }
