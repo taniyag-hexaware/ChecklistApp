@@ -12,7 +12,7 @@ const user = new mongoose.Schema(
         },
         role: {
             type: String,
-            enum: ['remote expert', 'field engg'],
+            enum: ['remote expert','field engg'],
             default:'field engg'
 
         }

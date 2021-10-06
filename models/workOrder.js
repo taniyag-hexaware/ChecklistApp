@@ -1,11 +1,17 @@
 const mongoose = require("mongoose");
 
+const userSchema = new mongoose.Schema(
 
+ {
+   userId:{
+     type:String
+   }
+ });
 const workOrder = new mongoose.Schema(
   {
     id: {
       type: String,
-      required: true,
+      required:true,
       unique: true,
     },
 
@@ -15,10 +21,9 @@ const workOrder = new mongoose.Schema(
       default:'pending'
     },
     assignedTo: {
-      type: String,
-      userId:{
-        type:String
-      }
+      type:userSchema,
+      default:null
+      
       },
     deadLine: {
       type: Date,
