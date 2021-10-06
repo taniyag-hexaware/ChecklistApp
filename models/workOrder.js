@@ -27,11 +27,11 @@ const workOrder = new mongoose.Schema(
       },
     deadLine: {
       type: Date,
-      required: true
+      //required: true
     },
-    taskId: {
-      type:Array,
-      }
+    taskId: [{
+      type:String,
+      }]
 
   },
 

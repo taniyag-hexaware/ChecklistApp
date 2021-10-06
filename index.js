@@ -8,6 +8,8 @@ const port = 9000;
 
 // we will create these todoRoutes in the future
 const userRoutes = require("./routes/user");
+const workOrderRoutes = require("./routes/workOrder");
+const taskRoutes = require("./routes/task");
 
 const app = express();
 
@@ -29,6 +31,8 @@ app.use(bodyParser.json());
 
 // include the userRoutes
 app.use("/api", userRoutes);
+app.use("/apis", workOrderRoutes);
+app.use("/api", taskRoutes);
 
 // start the server in the port 8000
 app.listen(port, () => {
